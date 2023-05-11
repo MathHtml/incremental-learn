@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino</title>
+  <title>Button Counter</title>
+  <style>
+    .counter {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1\>
-        NO
-    </h1>
-    <p>
-        It works
-    </p>
+  <h1>Button Counter</h1>
+  
+  <button id="counterButton" onclick="increaseCounter()">Click Me!</button>
+  
+  <div class="counter" id="counterValue">0</div>
+  
+  <script>
+    var counter = 0;
+
+    function increaseCounter() {
+      counter++;
+      document.getElementById("counterValue").innerHTML = counter;
+    }
+  </script>
 </body>
 </html>
